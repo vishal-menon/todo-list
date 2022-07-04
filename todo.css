@@ -1,0 +1,217 @@
+body
+{
+  background-color: rgb(231, 240, 228);
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.header
+{
+  background-color: rgb(18, 140, 126);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Heading
+{
+  font-family: 'Ruda';
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+}
+
+.list-container
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: vertical;
+  background-color: white;
+  width: 600px;
+  box-shadow: 0px 0px 10px rgba(0,0,0, 0.15);
+  border-radius: 4px;
+  padding-bottom: 100px;
+}
+
+.list-heading
+{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-family: 'Ruda';
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.inputs
+{
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.textbox
+{
+  display: flex;
+  flex: 1;
+}
+
+.submit-button
+{
+  margin-left: 10px;
+}
+
+.submit-button
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  padding-right: 6px;
+  border-radius: 30px;
+  background-color: rgb(18, 140, 126);
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0,0,0, 0.1);
+  transition: background-color 0.15s,
+  opacity 0.15s;
+}
+
+.submit-button:hover
+{
+  background-color: rgb(22, 117, 106);
+}
+
+.submit-button:active
+{
+  opacity: 0.8;
+}
+
+.task-text-head
+{
+  flex: 1;
+  font-family: 'Ruda';
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(0,0,0, 0.1);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.output-list
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  align-items: center;
+}
+
+.panel
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100%);
+  margin-bottom: 10px;
+}
+
+.task-checkbox
+{
+  accent-color: rgb(216, 232, 234);
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.task-textbox-div
+{
+  display: flex;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.task-text
+{
+  flex: 1;
+  font-family: 'Ruda';
+  font-size: 18px;
+  border: solid;
+  border-color: rgb(22, 117, 106);
+  border-width: 1px;
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(0,0,0, 0.1);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+.task-text:disabled
+{
+  background-color: white;
+  color: black;
+  border-color: rgb(22, 117, 106);
+}
+
+.buttons-div
+{
+  display: flex;
+}
+
+.edit-button,
+.delete-button
+{
+  font-family: 'Ruda';
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-width: 1px;
+  color: white;
+}
+
+.edit-button
+{
+  margin-right: 5px;
+  background-color: rgb(7, 189, 10);
+}
+
+.delete-button
+{
+  margin-right: 5px;
+  background-color: rgb(230, 20, 20);
+}
+
+
+.footer
+{
+  position: fixed;
+  background-color: rgb(28, 30, 33);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-text
+{
+  margin-left: 50px;
+  font-family: 'Ruda';
+  color: white;
+}
+
