@@ -70,6 +70,12 @@ let inputText = document.getElementById('input-text');
 
 let arrayTasks = [];
 
+let storeData = () => {
+  localStorage.setItem("myTasks", JSON.stringify(arrayTasks));
+}
+
+//Other functions
+
 let pushToArray = (inputTextp, id) => {
   arrayTasks.push(
     {
@@ -78,6 +84,8 @@ let pushToArray = (inputTextp, id) => {
     uid : id
     }
   );
+
+  storeData();
 }
 
 let deleteFromArray = (uid) => {
@@ -89,6 +97,7 @@ let deleteFromArray = (uid) => {
       return true;
 
   });
+  storeData();
 }
 
 let editArray = (uid, changedText) => {
@@ -101,6 +110,7 @@ let editArray = (uid, changedText) => {
     }
 
   });
+  storeData();
 
 }
 
@@ -114,6 +124,8 @@ let arrayCheckbox = (uid, isChecked) => {
     }
 
   });
+
+  storeData();
 
 }
 
@@ -218,8 +230,12 @@ checkboxFunc = (event) => {
   render();
 }
 
-
-
+//Loading data from localStorage
+if(localStorage.getItem("myTasks") !== null)
+{
+arrayTasks = JSON.parse(localStorage.getItem("myTasks"));
+render();
+}
 
 
 
