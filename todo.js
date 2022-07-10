@@ -10,8 +10,16 @@ checkboxDiv.setAttribute("class","checkbox-div");
 panel.appendChild(checkboxDiv);
 
 let checkbox = document.createElement("input");
+
+if(element.isComplete === false)
+checkbox.checked = false;
+else
+checkbox.checked = true;
+
 checkbox.setAttribute("class", "task-checkbox");
 checkbox.setAttribute("type", "checkbox");
+checkbox.setAttribute("id",`${element.uid}`);
+checkbox.onchange = checkboxFunc;
 checkboxDiv.appendChild(checkbox);
 
 let taskTextboxDiv = document.createElement("div");
@@ -19,7 +27,12 @@ taskTextboxDiv.setAttribute("class","task-textbox-div");
 panel.appendChild(taskTextboxDiv);
 
 let taskText = document.createElement("input");
+
+if(element.isComplete === false)
 taskText.setAttribute("class","task-text");
+else
+taskText.setAttribute("class","task-text-green");
+
 taskText.setAttribute("type","text");
 taskText.setAttribute("disabled",true);
 taskText.setAttribute("id",`t${element.uid}`);
@@ -91,6 +104,19 @@ let editArray = (uid, changedText) => {
 
 }
 
+let arrayCheckbox = (uid, isChecked) => {
+
+  arrayTasks.forEach(element => {
+
+    if(element.uid === +uid)
+    {
+        element.isComplete = isChecked;
+    }
+
+  });
+
+}
+
 /*
   {
     isComplete : bool,
@@ -115,7 +141,6 @@ let render = () => {
 
 let editGraphics = (editTaskTextbox, button) => {
 
-  editTaskTextbox.style.backgroundColor = "#f0f2f0";
   editTaskTextbox.focus();
   button.innerText = "Save";
 
@@ -179,6 +204,18 @@ saveTodo = (event) => {
 
   render();
 
+}
+
+checkboxFunc = (event) => {
+
+  const uid = event.target.id;
+
+  const isChecked = event.target.checked;
+  console.log(isChecked);
+
+  arrayCheckbox(uid, isChecked);
+
+  render();
 }
 
 

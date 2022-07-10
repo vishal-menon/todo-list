@@ -146,7 +146,8 @@ body
   margin-right: 10px;
 }
 
-.task-text
+.task-text,
+.task-text-green
 {
   flex: 1;
   font-family: 'Ruda';
@@ -159,6 +160,12 @@ body
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
+}
+
+.task-text-green
+{
+  background-color: rgba(42, 226, 18, 0.15);
+  text-decoration: line-through;
 }
 
 .task-text:disabled
